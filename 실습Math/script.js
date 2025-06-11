@@ -14,38 +14,34 @@
 
 */
 
-// const lotto = [];
-// // 베열 생성
-// const ulList = document.querySelector('#lotto');
-
-// for(let i=0; i<6; i++){
-//     let num = Math.floor(Math.random()* 6) + 1
-//     console.log(`중복되기전 : ${num}`);
-// }
-
-// console.log(num);
-
-// const liList = document.createElement('li');
-// liList.innerHTML = lotto[i];
-// liList.classList.add(`num${num}`);
-// // console.log(liList);
-
-
-// ulList.appendChild(liList);
-
-
-
-
-// 2. 중복되지 않는 랜덤 숫자 6개 생성
-
 const lotto = [];
+const ulList = document.querySelector('#lotto');
 
- for (let i=0; i<6; i++){
-    let num = Math.floor(Math.random() *6 ) +1
+for(let i=0; i<6; i++){
+    let num = Math.floor(Math.random() * 6) + 1
     console.log(`중복되기 전 : ${num}`);
+
+    /*
+    for(let j=0; j<lotto.length; j++){
+        if(num === lotto[j]){
+            num = Math.floor(Math.random() * 6) + 1
+            j = -1;
+            console.log(`중복되서 바꾼 숫자 : ${num}`);
+        }
+    }
+    */
     
- }
- 
-while(lotto.includes(num)){
-    num = Math.floor(Math.floor() * 6) +1;
+    while(lotto.includes(num)){
+        num = Math.floor(Math.random() * 6) + 1;
+        console.log(`중복되서 바꾼 숫자 : ${num}`);
+    }
+
+    lotto.push(num);
+    
+    const liList = document.createElement('li');
+    liList.innerHTML = lotto[i];
+    liList.classList.add(`num${num}`);
+    // console.log(liList);
+    ulList.appendChild(liList);
 }
+
