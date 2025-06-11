@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step01_dataset.html</title>
     <style>
-        
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
     </style>
 </head>
 <body>
@@ -21,15 +25,18 @@
         <div data-데이터이름 = '값'></div>
 
         - 불러오는법
-        documeent.querySelector()
+        documeent.querySelector().dataset.데이터이름;
 
         */
        const divs = document.querySelectorAll('div');
        for(let i=0; i<divs.length; i++){
-        divs[i].addEventListener('click',()=>{
-
-        })
-       })
+            divs[i].addEventListener('click',()=>{
+                divs[i].style.background = 'yellow';
+                divs[i].style.opacity = divs[i].dataset.opacity;
+            })
+       }
+       
+    
     </script>
 </body>
 </html>
