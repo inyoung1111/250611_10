@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_Date.html</title>
+</head>
+<body>
+    <script>
+        const now = new Date();
+        console.log(now); // 현재 날짜, 시간 출력 
+
+        console.log(now.getFullYear());
+        console.log(now.getMonth() +1);//월
+        console.log(now.getDate());//일
+        
+        console.log(now.getHours());//시간
+        console.log(now.getMinutes());//분
+        console.log(now.getSeconds());//초
+
+        const days = ['일','월'];
+        console.log(days[now.getDay()]); 
+
+        const date = new Date();
+        date.setFullYear(2023);
+        date.getMonth(11);
+        date.getDate(25);
+
+        console.log(date);
+
+        console.log(now.getTime()); //현재 시간 밀리초값
+
+        const future = new Date();
+
+        future.setTime(now.getTime() +1000 *60 *60 *24 );
+        console.log(future);
+        // 1000 1초 
+
+        console.log(now.toLocaleDateString()); //지역 설정에 맞는 날짜 출력
+        console.log(now.toLocaleTimeString()); //
+        console.log(now.toISOString()); //
+    </script>
+</body>
+</html>
